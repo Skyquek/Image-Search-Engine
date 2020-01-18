@@ -32,7 +32,8 @@ class RGBHistogram:
         # Normalise histogram for scale invariance
         # a.k.a get the same histogram for the same
         # image but different sizes
-        hist = cv2.normalize(hist)
+        dst = None
+        hist = cv2.normalize(hist,dst)
 
         # Return flattened numpy array
         # for our human-dumb computational

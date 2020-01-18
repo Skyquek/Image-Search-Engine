@@ -1,7 +1,8 @@
-# Import amazin packages
+# $ python indexing.py --dataset dataset --index data/index
+# Import amazing packages
 from rgbhistogram import RGBHistogram
 import argparse
-import cPickle
+import pickle as cPickle
 import glob
 import cv2
 
@@ -24,7 +25,8 @@ desc = RGBHistogram([8, 8, 8])
 for imagePath in glob.glob(args["dataset"] + "/*.jpeg"):
     # Get image filename
     k = imagePath[imagePath.rfind("/") + 1:]
-
+    print(k)
+	
     # Load image and compute its
     # features vector
     image    = cv2.imread(imagePath)
